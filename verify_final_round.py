@@ -167,9 +167,8 @@ print(f"  4/{p} = 1/{X} + 1/{Yp} + 1/{Zp}   (genuine Type II)")
 print("  => the classical obstruction is about IDENTITIES, not solutions")
 
 
-# ======================================================================
 # C. Why the coprimality qualifications are load-bearing (n = 9)
-# ======================================================================
+
 print("=" * 72)
 print("C. Qualification examples at n = 9")
 
@@ -184,9 +183,8 @@ print("  4/9 = 1/4 + 1/6 + 1/36    (one divisible by 9, gcd(6,3)=3 != 1)")
 print("  => coprimality clauses of profiles (i),(ii) cannot be dropped")
 
 
-# ======================================================================
+
 # D. Unit squares mod 840 = Mordell's list
-# ======================================================================
 print("=" * 72)
 print("D. Unit squares mod 840")
 usq = {a * a % 840 for a in range(1, 840) if gcd(a, 840) == 1}
@@ -194,9 +192,7 @@ check(usq == {1, 121, 169, 289, 361, 529}, f"unit squares {sorted(usq)}")
 print(f"  {{a^2 mod 840 : gcd(a,840)=1}} = {sorted(usq)}  = Mordell's list")
 
 
-# ======================================================================
 # E. SQUARE-OBSTRUCTION SWEEP for odd m, 3 <= m <= 99
-# ======================================================================
 print("=" * 72)
 print("E. Independent computational re-verification of Elsholtz--Tao")
 print("   Proposition 1.6 (Schinzel--Yamamoto vanishing): odd squares")
@@ -311,7 +307,7 @@ print(f"  exceptions: {total_exc}   (elapsed {el:.1f}s)")
 print("  => f_I(m^2) = f_II(m^2) = 0 independently re-verified, m <= 99")
 check(total_exc == 0, "obstruction sweep must be exception-free")
 
-# --- positive controls: the SAME machinery must FIND known solutions --
+# positive controls: the SAME machinery must FIND known solutions --
 print("  positive controls (machinery is not vacuous):")
 c1 = profile_i(9, 3, coprime=False)          # partial-divisor profile
 check((3, 18, 18) in c1, f"control (3,18,18) missing: {c1}")
@@ -362,9 +358,7 @@ print("  naive cross-validation for m <= 15: identical (empty) hit sets,")
 print("  and non-empty partial-divisor control sets -- machinery sound")
 
 
-# ======================================================================
 # F. Undilation: Type II solutions of 4/p for all 37 primes p=1 mod 4<400
-# ======================================================================
 print("=" * 72)
 print("F. c in {3,7} scaffolds => Type II solutions of 4/p, 37 primes")
 
@@ -400,9 +394,7 @@ check(sorted(via_c7) == [73, 193, 241, 313], "c=7-only residual set")
 print(f"  c=7 residual primes: {sorted(via_c7)}")
 
 
-# ======================================================================
 # G. z = lcm(x, y) on the flagship families (the (du,dv,duv) form)
-# ======================================================================
 print("=" * 72)
 print("G. Flagship families: z = lcm(x, y), anchors d = p and d = 2p")
 
@@ -481,12 +473,10 @@ for s_ in range(501):
 print("  numeric value-gcd sweep s, q = 0..500 on all five pairs  OK")
 
 
-# ======================================================================
 # H. LOPEZ TYPE A/B PLACEMENT OF ALL PRODUCED TRIPLES (the comparison
 #    resolved): undilate each Type III solution of 4/p^2 and test the
 #    Type A form (du, dv, duv) resp. Type B form (duv, du*a, dv*a),
 #    a = modulus [arXiv:2404.01508, Definitions 3-4, Theorems 1,2,4,5]
-# ======================================================================
 print("=" * 72)
 print("H. Lopez Type A/B placement (undilated prime-level triples)")
 
@@ -631,9 +621,7 @@ check(es(10, 25, 50, 25) and (10, 25, 50) == (5 * 2, 5 * 5, 5 * 2 * 5),
 check(typeA_params(2, 5, 10) == (1, 2, 5), "4/5 Type A")
 print("  4/25 = 5*(2, 5, 10): scaled Type A of 4/5 (his a = 25)  OK")
 
-# ======================================================================
 # I. THIN-SET CENSUS (square sub-case vs. non-square remainder)
-# ======================================================================
 print("=" * 72)
 print("I. Thin-set census for rho in {121, 169}, k < 5000, plus the")
 print("   Type II witness at the thin non-square n = 65")
